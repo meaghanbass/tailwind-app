@@ -3,7 +3,6 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 
 export default ({ data }) => {
-    console.log(data)
     return (
         <Layout>
         <div>
@@ -20,7 +19,6 @@ export default ({ data }) => {
                     — {node.frontmatter.date}
                     </span>
                 </h3>
-                <p>{node.excerpt}</p>
                 </Link>
             </div>
             ))}
@@ -43,7 +41,6 @@ export const query = graphql`
             fields {
                 slug
             }
-            excerpt
             }
         }
         }

@@ -1,5 +1,6 @@
 import { graphql, useStaticQuery, Link } from "gatsby";
 import React, { useState } from "react";
+import AllPages from "../pages/my-files"
 
 function Header() {
   const [isExpanded, toggleExpansion] = useState(false);
@@ -63,6 +64,8 @@ function Header() {
               {link.title}
             </Link>
           ))}
+
+            
         </nav>
       </div>
     </aside>
