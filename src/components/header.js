@@ -14,18 +14,9 @@ function Header() {
   `);
 
   return (
-    <header className="bg-teal-700">
-      <div className="flex flex-wrap items-center justify-between max-w-4xl mx-auto p-4 md:p-8">
-        <Link className="flex items-center no-underline text-white" to="/">
-          <svg
-            className="fill-current h-8 mr-2 w-8"
-            height="54"
-            viewBox="0 0 54 54"
-            width="54"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M13.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z" />
-          </svg>
+    <aside id="aside" className=" bg-gray-700 w-screen md:w-1/5 md:h-screen">
+      <div className="flex flex-wrap md:flex-col justify-between max-w-4xl mx-auto p-4 md:p-8">
+        <Link className="flex no-underline text-white" to="/">
           <span className="font-bold text-xl tracking-tight">
             {site.siteMetadata.title}
           </span>
@@ -48,7 +39,7 @@ function Header() {
         <nav
           className={`${
             isExpanded ? `block` : `hidden`
-          } md:block md:flex md:items-center w-full md:w-auto`}
+          } md:block md:flex w-full md:w-auto flex-col`}
         >
           {[
             {
@@ -65,7 +56,7 @@ function Header() {
             }
           ].map(link => (
             <Link
-              className="block md:inline-block mt-4 md:mt-0 md:ml-6 no-underline text-white"
+              className="block md:inline-block mt-4 md:mt-0 no-underline text-white"
               key={link.title}
               to={link.route}
             >
@@ -74,7 +65,7 @@ function Header() {
           ))}
         </nav>
       </div>
-    </header>
+    </aside>
   );
 }
 
