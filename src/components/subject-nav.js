@@ -1,30 +1,26 @@
 import { graphql, useStaticQuery, Link } from "gatsby";
 import React, { useState } from "react";
 import AllPages from "../pages/my-files"
+import "../css/style.css"
 
-function Header() {
-  const [isExpanded, toggleExpansion] = useState(false);
-  const { site } = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `);
+function SubjectNav() {
+//   const [isExpanded, toggleExpansion] = useState(false);
+//   const { site } = useStaticQuery(graphql`
+//     query SiteTitleQuery {
+//       site {
+//         siteMetadata {
+//           title
+//         }
+//       }
+//     }
+//   `);
 
   return (
-    <aside id="aside" className=" bg-gray-900 w-screen w-15vw md:h-screen">
-      <button className="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4">
-        <Link to="/">Home
-        </Link>
-      </button>
-
+    <aside id="subject-nav" className=" bg-gray-700 w-screen w-15vw md:h-screen">
       <div className="flex flex-wrap md:flex-col justify-between max-w-4xl mx-auto p-4 md:p-8">
         <Link className="flex no-underline text-white" to="/">
           <span className="font-bold text-xl tracking-tight">
-            {site.siteMetadata.title}
+            {/* {site.siteMetadata.title} */}
           </span>
         </Link>
 
@@ -42,7 +38,7 @@ function Header() {
           </svg>
         </button>
 
-        <nav
+        {/* <nav
           className={`${
             isExpanded ? `block` : `hidden`
           } md:block md:flex w-full md:w-auto flex-col`}
@@ -60,10 +56,6 @@ function Header() {
             {
               route: `/contact`,
               title: `Contact`
-            },
-            {
-              route: `/history/history`,
-              title: `History`
             }
           ].map(link => (
             <Link
@@ -76,10 +68,10 @@ function Header() {
           ))}
 
             
-        </nav>
+        </nav> */}
       </div>
     </aside>
   );
 }
 
-export default Header;
+export default SubjectNav;
