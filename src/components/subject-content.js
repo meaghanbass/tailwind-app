@@ -4,11 +4,9 @@ import SubjectNav from "../components/subject-nav"
 
 function SubjectContent({ children }) {
     return (
-        <React.Fragment>
-            <div id="subject-content" className="relative flex flex-col md:justify-center md:w-auto"> 
-                {children}
-            </div>
-        </React.Fragment>
+        <div id="subject-content" className="relative flex flex-col md:justify-center md:w-auto"> 
+            {children}
+        </div>
         );
     }
     

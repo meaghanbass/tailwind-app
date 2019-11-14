@@ -1,13 +1,15 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
+import AllFilesQuery from "../components/queries/allfiles"
 
 export default ({ data }) => {
   return (
     <Layout>
-      <div>
+      <AllFilesQuery></AllFilesQuery>
+      {/* <div>
         <h1>
-          Pages
+          HOME
         </h1>
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <div key={node.id}>
@@ -19,27 +21,27 @@ export default ({ data }) => {
             </Link>
           </div>
         ))}
-      </div>
+      </div> */}
     </Layout>
   )
 }
 
-export const query = graphql`
-  query {
-    allMarkdownRemark {
-      totalCount
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-            date(formatString: "DD MMMM, YYYY")
-          }
-          fields {
-            slug
-          }
-        }
-      }
-    }
-  }
-`
+// export const query = graphql`
+//   query {
+//     allMarkdownRemark {
+//       totalCount
+//       edges {
+//         node {
+//           id
+//           frontmatter {
+//             title
+//             date
+//           }
+//           fields {
+//             slug
+//           }
+//         }
+//       }
+//     }
+//   }
+// `
