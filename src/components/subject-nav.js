@@ -16,7 +16,11 @@ function SubjectNav() {
 //   `);
 
   return (
-    <aside id="subject-nav" className=" bg-gray-700 w-screen w-15vw md:h-screen">
+    <aside id="subject-nav" className="relative bg-gray-700 w-screen w-15vw md:h-screen">
+        <button className="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4">
+            <Link to="/">Home
+            </Link>
+        </button>
       <div className="flex flex-wrap md:flex-col justify-between max-w-4xl mx-auto p-4 md:p-8">
         <Link className="flex no-underline text-white" to="/">
           <span className="font-bold text-xl tracking-tight">

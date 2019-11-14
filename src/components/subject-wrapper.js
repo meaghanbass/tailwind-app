@@ -7,7 +7,7 @@ import SubjectContent from "./subject-content"
 function SubjectWrapper({ children }) {
     return (
         <Layout>
-        <div id="subject-wrapper" className="flex flex-col md:flex-row font-sans min-h-screen text-gray-900"> 
+        <div id="subject-wrapper" className="flex flex-row font-sans min-h-screen text-gray-900"> 
             <SubjectNav>
                 {children}
             </SubjectNav>
